@@ -51,7 +51,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#070615]">
+    <section id="contact" className="py-20 bg-[#0e0c1e]">
       <motion.div
         ref={ref}
         initial="hidden"
@@ -59,7 +59,7 @@ const Contact = () => {
         variants={container}
         className="max-w-3xl mx-auto px-6"
       >
-        <motion.h2 variants={item} className="text-3xl md:text-4xl font-bold text-white text-center mb-3">
+        <motion.h2 variants={item} className="text-5xl md:text-4xl font-bold text-white text-center mb-3">
           Contact Me
         </motion.h2>
         <motion.p variants={item} className="text-gray-400 text-center mb-8">

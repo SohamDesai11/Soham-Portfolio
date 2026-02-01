@@ -47,7 +47,7 @@ const Work = () => {
                 animate={inView ? {opacity:1, y:0} : {}}
                 transition={{delay:0.3, duration:0.5}}
 
-                
+
                 className="text-4xl text-white font-bold text-center mb-12">My Projects</motion.h2>
                 <motion.p 
                 ref={ref}

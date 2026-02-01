@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
 import { motion } from "framer-motion";
-import resume from "../assets/Soham_Desai_Resume (18).pdf";
+import resume from "../assets/Soham_Desai_Resume (21).pdf";
 
 const Navigation = () => {
 
@@ -25,22 +25,23 @@ const variants = {
     { id: 4, text: "Contact", href: "#contact" },
   ];
   return (
-    <div>
-      <div className='container mx-auto hidden md:flex justify-between items-center py-6'>
-        <div className='text-xl lg:text-2xl font-bold flex items-center gap-1'>
-          <span className='text-white'>Soham</span>
-          <span className='text-purple-500'>Desai</span>
+    <>
+      <nav className="fixed w-full top-0 z-50">
+        <div className='container mx-auto hidden md:flex justify-between items-center py-6 bg-[#0e0c1e]/60 backdrop-blur-sm'>
+          <div className='text-xl lg:text-2xl font-bold flex items-center gap-1'>
+            <span className='text-white'>Soham</span>
+            <span className='text-purple-500'>Desai</span>
+          </div>
+          <div>
+            <ul className='hidden md:flex items-center space-x-6 list-none lg:text-lg md:text-base text-white'>
+              {items.map(({id, text, href})=> (
+                <li key={id}><a href={href} className='hover:text-purple-500 duration-150 cursor-pointer'>{text}</a></li>
+              ))}
+            </ul>
+          </div>
+          <a href={resume} download="Soham_Desai_Resume.pdf" className="md:text-base lg:text-lg bg-purple-500 hover:bg-purple-400 text-white px-4 py-2 rounded-full" target="_blank" rel="noopener noreferrer">Download CV</a>
         </div>
-        <div>
-          <ul className='hidden md:flex items-center space-x-6 list-none lg:text-lg md:text-base text-white'>
-            {items.map(({id, text, href})=> (
-              <li key={id}><a href={href} className='hover:text-purple-500 duration-150 cursor-pointer'>{text}</a></li>
-            ))}
-          </ul>
-        </div>
-        <a href={resume} download="Soham_Desai_Resume.pdf" className="md:text-base lg:text-lg bg-purple-500 hover:bg-purple-400 text-white px-4 py-2 rounded-full" target="_blank" rel="noopener noreferrer">Download CV</a>
-      </div>
-      <div className='flex md:hidden justify-between'>
+        <div className='flex md:hidden justify-between bg-[#0e0c1e]/60 backdrop-blur-sm'>
         <motion.div
         initial="closed"
         animate={menu ? "open" : "closed"}>
@@ -71,7 +72,9 @@ const variants = {
             <span className="text-purple-500">Desai</span>
         </motion.div>
       </div>
-    </div>
+      </nav>
+      <div className="h-20 md:h-20" />
+    </>
   )
 }
 export default Navigation;
