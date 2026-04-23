@@ -2,6 +2,8 @@ import React from "react";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project_2.png";
 import project3 from "../assets/project3.png";
+import project4 from "../assets/project4.png";
+import project5 from "../assets/project5.png";
 import { motion } from "framer-motion";
 import { useInView} from "react-intersection-observer";
 
@@ -30,8 +32,25 @@ const Work = () => {
             image: project3,
             link: "https://github.com/Cody935/MagicCardScanning",
             tech: ["OCR", "Python", "Flask", "SQLAlchemy"],
-        }
+        },
+        {
+            id: 4,
+            title: "Sentiment Analysis App ",
+            description: "A full-stack web app that classifies product reviews as Positive, Negative, or Neutral using a transformer-based NLP model. Built with Next.js and the Hugging Face Inference API.",
+            image: project4,
+            link: "https://github.com/SohamDesai11/sentiment-analysis-web",
+            tech: ["Next.js", "Typescript", "Tailwind Css", "Hugging Face"],
+        },
+        {
+            id: 5,
+            title: "Housing Price Prediction",
+            description: "Built and compared four regression models Linear Regression, KNN, Random Forest, and XGBoost — to predict Canadian housing prices using location, property, and socioeconomic features. Tuned XGBoost via RandomizedSearchCV, achieving an R² of 0.42 on a dataset of 35,000+ listings",
+            image: project5,
+            link: "https://github.com/SohamDesai11/housing-price-prediction-ml",
+            tech: ["Python", "scikit-learn", "Pandas ", "NumPy", "Mathplotlib"],
+        },
     ]
+    
 
     const {ref, inView} = useInView({
             threshold:0.2,

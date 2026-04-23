@@ -40,8 +40,8 @@ const About = () => {
                 animate={ inView ? {opacity:1, x:0} : {}}
                 transition={{delay:0.6, duration:0.5}}
                 className="md:w-1/2  text-gray-400 px-4 md:px-0 text-base sm:text-lg md:text-xl">
-                    I’m a software engineering student at Seneca Polytechnic with a focus on software development, 
-                    database management, and cybersecurity. With experience across diverse projects, 
+                    I’m a software engineering student at Seneca Polytechnic with a focus on Software Development, 
+                    Database Management, and Artificial Intelligence. With experience across diverse projects, 
                     I bring strong skills in project management, teamwork, and 
                     problem-solving to every challenge, aiming to build innovative and efficient solutions in the tech industry.
                 </motion.p>
